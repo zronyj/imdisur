@@ -79,8 +79,6 @@ var app = new Vue({
 				this.stickyNav = false;
 			}
 		}
-		var alto = document.getElementById("comienza").offsetHeight;
-		document.getElementById("rosado").setAttribute("style", "height:" + alto + "px");
 		var canvas = document.getElementById('glitter');
 		var ctx = canvas.getContext('2d');
 		this.canvasParams.w = canvas.width = document.getElementById("rosado").offsetWidth;

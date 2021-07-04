@@ -96,6 +96,7 @@ hr {
 }
 
 #rosado {
+	height: 75vh;
 	background: linear-gradient(180deg, rgba(224,96,96,1) 0%, rgba(255,160,160,1) 50%, rgba(255,208,208,1) 100%);
 }
 
