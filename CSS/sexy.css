@@ -1,0 +1,125 @@
+h1 {
+	font-size: 1.5em;
+}
+
+a {
+	color: white !important;
+}
+
+a:hover {
+	color: #FFA0A0 !important;
+}
+
+#cabeza {
+	background: linear-gradient(90deg, rgba(0,0,55,1) 0%, rgba(0,0,75,1) 10%, rgba(0,0,75,1) 90%, rgba(0,0,55,1) 100%);
+	color: white;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#banner {
+	background-size: cover;
+	height: 150px;
+	width: 100%;
+	display: table-row;
+}
+
+#maxi-logo {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#titulo {
+	display: table-cell;
+	vertical-align: middle;
+	padding-top: 1em;
+}
+
+#maxi-logo img {
+	height: 125px;
+}
+
+#subtitulo {
+	font-size: 0.7rem;
+}
+
+hr {
+	padding: 0;
+	margin: 0;
+	border-top: 1px solid white;
+	position: absolute;
+	width: 80%
+}
+
+.mini-logo {
+	height: 40px;
+}
+
+#criptobarra {
+	background: linear-gradient(90deg, rgba(0,0,55,1) 0%, rgba(0,0,75,1) 10%, rgba(0,0,75,1) 90%, rgba(0,0,55,1) 100%);
+	box-shadow: 0px 0px 8px 0px #000;
+	width: 100%;
+	color: white;
+	padding-left: 10%;
+	padding-right: 10%;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 200;
+	top: 0;
+}
+
+.segmento {
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#comienza {
+	width: 100%;
+	background-color: rgb(255,255,255);
+}
+
+#descripcion {
+	background-color: rgb(0,0,75);
+	text-align: center;
+	color: white;
+	height: 100%;s
+}
+
+#primeraimagen {
+	padding: 0;
+}
+
+#primeraimagen img {
+	width: 100%;
+}
+
+#rosado {
+	background: linear-gradient(180deg, rgba(224,96,96,1) 0%, rgba(255,160,160,1) 50%, rgba(255,208,208,1) 100%);
+}
+
+#glitter {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+
+#galeria {
+	background-color: rgb(0,0,75);
+}
+
+/* breakpoints */
+
+@media only screen and (min-width: 992px) {
+	#descripcion {
+		position: relative;
+	}
+
+	#descripcion .card-body {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./IMG/imdisur1.png">
+	<title>Imdisur</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./CSS/sexy.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div id="cabeza">
+			<div id="banner">
+				<div id="maxi-logo">
+					<img src="./IMG/imdisur2.png">
+				</div>
+				<div id="titulo">
+					<h1 class="banner-title">IMDISUR</h1>
+					<p id="subtitulo">Distribuidor exclusivo de Zhumir Pink en Guatemala</p>
+				</div>	
+			</div>
+			<hr>
+			<nav id="nav" class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand brand" href="#">
+					<img class="mini-logo" src="./IMG/imdisur2.png">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra-resp" aria-controls="barra-resp" aria-expanded="false" aria-label="Navegación">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="barra-resp">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Zhumir Pink</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Galería</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contacto</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div id="criptobarra" v-if="stickyNav">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand brand" href="#">
+					<img class="mini-logo" src="./IMG/imdisur2.png">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra-resp" aria-controls="barra-resp" aria-expanded="false" aria-label="Navegación">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="barra-resp">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Zhumir Pink</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Galería</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contacto</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="segmento row" id="comienza">
+			<div class="col-md-6 col-sm-12">
+				<div class="card" id="descripcion">
+					<div class="card-body">
+						<h2>Imdisur</h2>
+						<p>Imdisur comenzó a partir de la gran aceptación que tiene Zhumir Pink en Guatemala. Es conocido por su compromiso auténtico con la satisfacción del cliente.</p>
+						<p>Nuestros clientes son lo principal para nosotros y para ellos escogemos productos excepcionales como lo es Pink. Contáctanos hacer tu pedido o para saber más sobre nosotros.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="card">
+					<div class="card-body" id="primeraimagen">
+						<img src="./IMG/botellas2.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="segmento" id="rosado">
+			<canvas id="glitter"></canvas>
+		</div>
+		<div class="segmento" id="galeria"></div>
+		<div class="segmento" id="contacto"></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./JS/action.js"></script>
+</body>
+</html>
