@@ -3,9 +3,10 @@ var app = new Vue({
 	data: {
 		stickyNav: false,
 		vueCanvas: null,
-		sparkColors: ["rgba(255,255,255,0)", "rgba(255,255,255,0.5)", "rgba(255,255,255,0.75)",	"rgba(255,255,255,1)"],
 		canvasParams: {
 			partilcesOnScreen: 600,
+			colors: ["rgba(255,255,255,0)", "rgba(255,255,255,0.5)", "rgba(255,255,255,1)"],
+			criterio: 0.25,
 			particlesArray: [],
 			w: 0,
 			h: 0
@@ -15,6 +16,13 @@ var app = new Vue({
 		random: function (min, max) {
 			return min + Math.random() * (max - min + 1);
 		},
+		switch: function (color) {
+			var dados = Math.random();
+			if (dados < this.canvasParams.criterio) {
+				color = Math.floor(Math.random() * this.canvasParams.colors.length);
+			}
+			return color;
+		},
 		createGlitter: function () {
 			for (var i = 0; i < this.canvasParams.partilcesOnScreen; i++) {
 				this.canvasParams.particlesArray.push({
@@ -23,7 +31,7 @@ var app = new Vue({
 					color: 0,
 					speedX: this.random(-0.05,0.05),
 					speedY: this.random(0.7, 0.9),
-					radius: this.random(0.2, 0.3)
+					radius: this.random(0.2, 0.25)
 				});
 			}
 		},
@@ -38,9 +46,9 @@ var app = new Vue({
 					this.canvasParams.particlesArray[i].radius,
 				);
 
-				this.canvasParams.particlesArray[i].color = Math.floor(Math.random()**0.5 * this.sparkColors.length);
-				gradient.addColorStop(0.0, this.sparkColors[this.canvasParams.particlesArray[i].color]);
-				gradient.addColorStop(1.0, this.sparkColors[this.canvasParams.particlesArray[i].color]);
+				this.canvasParams.particlesArray[i].color = this.switch(this.canvasParams.particlesArray[i].color);
+				gradient.addColorStop(0.0, this.canvasParams.colors[this.canvasParams.particlesArray[i].color]);
+				gradient.addColorStop(1.0, this.canvasParams.colors[this.canvasParams.particlesArray[i].color]);
 
 				this.vueCanvas.beginPath();
 				this.vueCanvas.arc(
