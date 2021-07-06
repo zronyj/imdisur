@@ -4,7 +4,7 @@ var app = new Vue({
 		stickyNav: false,
 		vueCanvas: null,
 		canvasParams: {
-			partilcesOnScreen: 600,
+			partilcesOnScreen: 500,
 			colors: ["rgba(255,255,255,0)", "rgba(255,255,255,0.5)", "rgba(255,255,255,1)"],
 			criterio: 0.25,
 			particlesArray: [],
@@ -14,7 +14,7 @@ var app = new Vue({
 	},
 	methods: {
 		random: function (min, max) {
-			return min + Math.random() * (max - min + 1);
+			return min + Math.random() * (max - min);
 		},
 		switch: function (color) {
 			var dados = Math.random();
@@ -29,9 +29,9 @@ var app = new Vue({
 					x: Math.random() * this.canvasParams.w,
 					y: Math.random() * this.canvasParams.h,
 					color: 0,
-					speedX: this.random(-0.05,0.05),
-					speedY: this.random(0.7, 0.9),
-					radius: this.random(0.2, 0.25)
+					speedX: this.random(-0.3,0.3),
+					speedY: this.random(0.7, 1.3),
+					radius: this.random(0.7, 0.9)
 				});
 			}
 		},
