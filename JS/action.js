@@ -3,9 +3,7 @@ var app = new Vue({
 	data: {
 		stickyNav: false,
 		vueCanvas: null,
-		sparkColors: ["rgba(255,255,255,0)",
-		"rgba(255,255,255,0.5)", "rgba(255,255,255,0.75)",
-		"rgba(255,255,255,1)", "rgba(175,175,175,1)"],
+		sparkColors: ["rgba(255,255,255,0)", "rgba(255,255,255,0.5)", "rgba(255,255,255,0.75)",	"rgba(255,255,255,1)"],
 		canvasParams: {
 			partilcesOnScreen: 600,
 			particlesArray: [],
