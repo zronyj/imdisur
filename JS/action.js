@@ -3,8 +3,11 @@ var app = new Vue({
 	data: {
 		stickyNav: false,
 		vueCanvas: null,
+		sparkColors: ["rgba(255,255,255,0)",
+		"rgba(255,255,255,0.5)", "rgba(255,255,255,0.75)",
+		"rgba(255,255,255,1)", "rgba(175,175,175,1)"],
 		canvasParams: {
-			partilcesOnScreen: 500,
+			partilcesOnScreen: 600,
 			particlesArray: [],
 			w: 0,
 			h: 0
@@ -19,10 +22,10 @@ var app = new Vue({
 				this.canvasParams.particlesArray.push({
 					x: Math.random() * this.canvasParams.w,
 					y: Math.random() * this.canvasParams.h,
-					opacity: 0.5 + Math.random() * 0.5,
+					color: 0,
 					speedX: this.random(-0.05,0.05),
 					speedY: this.random(0.7, 0.9),
-					radius: this.random(0.4, 0.5)
+					radius: this.random(0.2, 0.3)
 				});
 			}
 		},
@@ -37,8 +40,9 @@ var app = new Vue({
 					this.canvasParams.particlesArray[i].radius,
 				);
 
-				gradient.addColorStop(0.0, "rgba(240,240,240," + this.canvasParams.particlesArray[i].opacity + ")");
-				gradient.addColorStop(1.0, "rgba(210,210,210," + this.canvasParams.particlesArray[i].opacity + ")");
+				this.canvasParams.particlesArray[i].color = Math.floor(Math.random()**0.5 * this.sparkColors.length);
+				gradient.addColorStop(0.0, this.sparkColors[this.canvasParams.particlesArray[i].color]);
+				gradient.addColorStop(1.0, this.sparkColors[this.canvasParams.particlesArray[i].color]);
 
 				this.vueCanvas.beginPath();
 				this.vueCanvas.arc(
