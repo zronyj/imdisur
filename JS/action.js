@@ -4,9 +4,9 @@ var app = new Vue({
 		stickyNav: false,
 		vueCanvas: null,
 		canvasParams: {
-			partilcesOnScreen: 500,
+			partilcesOnScreen: 400,
 			colors: ["rgba(255,255,255,0)", "rgba(255,255,255,0.5)", "rgba(255,255,255,1)"],
-			criterio: 0.25,
+			criterio: 0.3,
 			particlesArray: [],
 			w: 0,
 			h: 0
@@ -31,7 +31,7 @@ var app = new Vue({
 					color: 0,
 					speedX: this.random(-0.3,0.3),
 					speedY: this.random(0.7, 1.3),
-					radius: this.random(0.7, 0.9)
+					radius: this.random(0.5, 0.7)
 				});
 			}
 		},
